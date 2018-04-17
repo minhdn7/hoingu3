@@ -6,6 +6,7 @@ import android.content.Context;
 import com.hoingu3.app.LineApplication;
 import com.hoingu3.ui.activity.BaseActivity;
 import com.hoingu3.ui.activity.HomeActivity;
+import com.hoingu3.ui.activity.PlayActivity;
 import com.hoingu3.ui.activity.StartActivity;
 import com.hoingu3.ui.fragment.BaseFragment;
 
@@ -17,9 +18,10 @@ import javax.inject.Singleton;
  */
 @Module(
         includes = {
-//        LoginModule.class,
+
                 UserModule.class,
-                NetModule.class },
+                NetModule.class
+        },
         injects = {
                 //App
                 LineApplication.class,
@@ -33,6 +35,7 @@ import javax.inject.Singleton;
 
                 StartActivity.class,
                 HomeActivity.class,
+                PlayActivity.class,
 //        //Fragment
 
 //        ThongBaoFragment.class
@@ -45,7 +48,7 @@ public class AppModule {
         this.context = context;
     }
 
-    @Provides @Singleton public Context provideApplicationContext() {
-        return this.context;
-    }
+//    @Provides @Singleton public Context provideApplicationContext() {
+//        return this.context;
+//    }
 }
